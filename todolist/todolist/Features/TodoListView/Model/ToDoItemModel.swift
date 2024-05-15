@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct ToDoItem: Identifiable {
+struct ToDoItemModel: Identifiable {
     let id = UUID()
     var title: String
     var body: String

@@ -19,14 +19,22 @@ struct ToDoItemView: View {
                     .font(.title2)
                     .bold()
                     .foregroundColor(isDone ? .gray : .black)
+                    .onTapGesture {
+                        print("HEELOOO")
+                    }
                 Text(bodyText)
                     .font(.body)
                     .foregroundColor(isDone ? .gray : .black)
+                    .onTapGesture {
+                        print("HEELOOO")
+                    }
             }
             Spacer(minLength: 5)
             Image(systemName: isDone ? "checkmark.circle.fill" : "checkmark.circle")
                 .foregroundColor(.black)
-        }.onTapGesture {
+        }
+        .contentShape(Rectangle())
+        .onTapGesture {
             toggle()
         }
     }
